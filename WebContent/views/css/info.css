@@ -1,0 +1,267 @@
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	position: relative;
+	max-width: 900px;
+	width: 100%;
+	border-radius: 6px;
+	padding: 30px;
+	margin: 30px 15px 30px 15px;
+	background-color: #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .profile {
+	position: relative;
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	text-align: center;
+	font-size: 25px;
+}
+
+.container form {
+	position: relative;
+	margin-top: 16px;
+	min-height: 311px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.container form .form {
+	position: absolute;
+	background-color: #fff;
+	transition: 0.3s ease;
+	width: 100%;
+}
+
+form.secActive .form {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(-100%);
+}
+
+.container form .title {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 6px 0;
+	color: #333;
+}
+
+.container form .fields {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+form .fields .input-field {
+	display: flex;
+	width: 400px;
+	flex-direction: column;
+	margin: 4px 0;
+	position: relative;
+}
+
+.input-field label {
+	font-size: 12px;
+	font-weight: 500;
+	color: #2e2e2e;
+}
+
+.input-field input, select {
+	outline: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: #333;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	padding: 0 15px;
+	height: 42px;
+	margin: 8px 0;
+}
+
+.input-field input :focus, .input-field select:focus {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.input-field select, .input-field input[type="date"] {
+	color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+	color: #333;
+}
+
+.container form button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	max-width: 200px;
+	width: 100%;
+	border: none;
+	outline: none;
+	color: #fff;
+	border-radius: 5px;
+	margin: 25px 0;
+	background-color: #4070f4;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+.save, .savePassword {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container form .btnText {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+form button:hover {
+	background-color: #265df2;
+}
+
+@media ( max-width : 1200px) {
+	.container form::-webkit-scrollbar {
+		display: none;
+	}
+	form .fields .input-field {
+		width: calc(100%/ 2 - 15px);
+	}
+	.input-full {
+		width: calc(100% + 50px);
+	}
+}
+
+@media ( max-width : 900px) {
+	.container form::-webkit-scrollbar {
+		display: none;
+	}
+	form .fields .input-field {
+		width: calc(100%/ 2 - 15px);
+	}
+}
+
+@media ( max-width : 550px) {
+	.container form {
+		height: 553px;
+	}
+	form .fields .input-field {
+		width: 100%;
+	}
+}
+
+.input-full {
+	width: 100% !important;
+}
+
+.tab-wrap {
+	transition: 0.3s box-shadow ease;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	list-style: none;
+	background: #4070f4;
+	margin-top: 80px;
+}
+
+.tab {
+	display: none;
+}
+
+.tab__content {
+	padding: 10px 25px;
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	left: 0;
+	transform: translateY(-3px);
+}
+
+.tab-wrap.account .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 1 !important;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab-wrap.account .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2) {
+	opacity: 1;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 1 !important;
+	transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+
+.tab:checked+label {
+	background-color: #fff;
+	box-shadow: 0 -1px 0 #fff inset;
+	cursor: default;
+}
+
+.tab:checked+label:hover {
+	box-shadow: 0 -1px 0 #fff inset;
+	background-color: #fff;
+}
+
+.tab+label {
+	width: 100%;
+	box-shadow: 0 -1px 0 #eee inset;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	flex-grow: 2;
+	text-align: center;
+	background-color: #f2f2f2;
+	text-align: center;
+	transition: 0.3s background-color ease, 0.3s box-shadow ease;
+	height: 50px;
+	padding: 15px;
+}
+
+@media ( min-width : 768px) {
+	.tab+label {
+		width: auto;
+	}
+}
+
+.tab+label:hover {
+	background-color: #f9f9f9;
+	box-shadow: 0 1px 0 #f4f4f4 inset;
+}
+
+.show-btn {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	color: #4070f4;
+}
+
+.show-btn i.hide-btn::before {
+	content: "\f070";
+}

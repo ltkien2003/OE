@@ -1,0 +1,150 @@
+.play-container {
+	margin-top: 80px;
+	padding-left: 2%;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.play-video {
+	flex-basis: 69%;
+}
+
+.right-sidebar {
+	flex-basis: 30%;
+}
+
+.play-video iframe {
+	width: 100%;
+}
+
+.side-video-list {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.side-video-list img {
+	width: 100%;
+}
+
+.side-video-list .small-thumbnail {
+	flex-basis: 49%;
+}
+
+.side-video-list .vid-info {
+	flex-basis: 49%;
+}
+
+.side-video-list .vid-info>a {
+	font-size: 16px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #0f0f0f;
+	line-height: 1.4;
+}
+
+.side-video-list .vid-info>a:hover {
+	color: red;
+	transition: all ease 0.3s;
+}
+
+.side-video-list .vid-info a:hover {
+	transition: all ease 0.3s;
+}
+
+.side-video-list .vid-info p {
+	color: #606060;
+	font-size: 12px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 10px;
+}
+
+.play-video h3 {
+	color: #0f0f0f;
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 10px;
+	line-height: 1.5;
+}
+
+.play-video .play-video-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #5a5a5a;
+	width: 100%;
+}
+
+.play-video .play-video-info a i {
+	font-size: 20px;
+	margin-right: 8px;
+}
+
+.play-video .play-video-info a {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 15px;
+}
+
+.play-video hr {
+	border: 0;
+	height: 1px;
+	background: #ccc;
+	margin: 10px 0;
+}
+
+.movie-emotion {
+	margin-top: 10px;
+	display: flex;
+}
+
+.movie-emotion a {
+	margin-right: 10px;
+	text-decoration: none;
+	color: #606060;
+}
+
+.vid-description {
+	margin: 15px 0;
+}
+
+.vid-description p {
+	font-size: 14px;
+	margin-bottom: 10px;
+	color: #5a5a5a;
+	line-height: 2;
+}
+
+@media ( max-width : 900px) {
+	.play-video {
+		flex-basis: 100%;
+	}
+	.right-sidebar {
+		flex-basis: 100%;
+	}
+	.play-container {
+		padding-left: 5%;
+	}
+	.vid-description {
+		padding-left: 0;
+	}
+	.play-video .play-video-info a {
+		margin-left: 0;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}

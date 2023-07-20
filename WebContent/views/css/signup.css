@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	background-color: #f7f8fc;
+	color: #141c2c;
+	font-family: "Roboto", Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+a {
+	color: #2762eb;
+	text-decoration: none;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 3px;
+	width: 1000px;
+	max-width: 100%;
+	display: flex;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+	font-size: 40px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #ecf2ff;
+	padding: 40px;
+	flex: 1;
+}
+
+.btn {
+	background-color: #141c2c;
+	border: 2px solid #141c2c;
+	cursor: pointer;
+	border-radius: 3px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 0 0 20px 0;
+	width: 100%;
+	transition: 0.2s;
+}
+
+.btn:hover {
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+	margin: 10px 0;
+	width: 100%;
+}
+
+.form-group {
+	height: 40px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 28px;
+}
+
+.form-group input {
+	height: 100%;
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	border-bottom: 2px solid silver;
+}
+
+.form-group input:focus ~ label, .form-group input:valid ~ label {
+	transform: translateY(-20px);
+	font-size: 15px;
+	color: #4158d0;
+}
+
+.form-group label {
+	position: absolute;
+	bottom: 18px;
+	left: 0;
+	color: grey;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.form-group .underline {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	bottom: 0;
+}
+
+.form-group .underline:before {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: #4158d0;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+}
+
+.form-group input:focus ~ .underline:before, .form-group input:valid ~
+	.underline:before {
+	transform: scaleX(1);
+}
+
+.btn-ghost {
+	background-color: transparent;
+	border-color: #ecf2ff;
+	color: #141c2c;
+}
+
+.features {
+	flex: 1.5;
+	padding: 40px;
+	background-image: url('/Assignment2/views/image/login.jpg');
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+@media ( max-width : 768px) {
+	.container {
+		flex-direction: column;
+		top: 10%;
+		margin-top: 7 0%;
+		left: 0;
+	}
+	form {
+		border-right: 0;
+	}
+	.features {
+		display: none;
+	}
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
